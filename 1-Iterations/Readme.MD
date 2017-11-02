@@ -1,46 +1,61 @@
-This is a demo task.
+Codility logo
+trainingQGRH7W-AHV
+C# 1h 58m
+Task 1
+Task description
+A binary gap within a positive integer N is any maximal sequence of consecutive zeros that is surrounded by ones at both ends in the binary representation of N.
 
-A zero-indexed array A consisting of N integers is given. An equilibrium index of this array is any integer P such that 0 ≤ P < N and the sum of elements of lower indices is equal to the sum of elements of higher indices, i.e. 
-A[0] + A[1] + ... + A[P−1] = A[P+1] + ... + A[N−2] + A[N−1].
-Sum of zero elements is assumed to be equal to 0. This can happen if P = 0 or if P = N−1.
-
-For example, consider the following array A consisting of N = 8 elements:
-
-  A[0] = -1
-  A[1] =  3
-  A[2] = -4
-  A[3] =  5
-  A[4] =  1
-  A[5] = -6
-  A[6] =  2
-  A[7] =  1
-P = 1 is an equilibrium index of this array, because:
-
-A[0] = −1 = A[2] + A[3] + A[4] + A[5] + A[6] + A[7]
-P = 3 is an equilibrium index of this array, because:
-
-A[0] + A[1] + A[2] = −2 = A[4] + A[5] + A[6] + A[7]
-P = 7 is also an equilibrium index, because:
-
-A[0] + A[1] + A[2] + A[3] + A[4] + A[5] + A[6] = 0
-and there are no elements with indices greater than 7.
-
-P = 8 is not an equilibrium index, because it does not fulfill the condition 0 ≤ P < N.
+For example, number 9 has binary representation 1001 and contains a binary gap of length 2. The number 529 has binary representation 1000010001 and contains two binary gaps: one of length 4 and one of length 3. The number 20 has binary representation 10100 and contains one binary gap of length 1. The number 15 has binary representation 1111 and has no binary gaps.
 
 Write a function:
 
-class Solution { public int solution(int[] A); }
+class Solution { public int solution(int N); }
 
-that, given a zero-indexed array A consisting of N integers, returns any of its equilibrium indices. The function should return −1 if no equilibrium index exists.
+that, given a positive integer N, returns the length of its longest binary gap. The function should return 0 if N doesn't contain a binary gap.
 
-For example, given array A shown above, the function may return 1, 3 or 7, as explained above.
+For example, given N = 1041 the function should return 5, because N has binary representation 10000010001 and so its longest binary gap is of length 5.
 
 Assume that:
 
-N is an integer within the range [0..100,000];
-each element of array A is an integer within the range [−2,147,483,648..2,147,483,647].
+N is an integer within the range [1..2,147,483,647].
 Complexity:
 
-expected worst-case time complexity is O(N);
-expected worst-case space complexity is O(N), beyond input storage (not counting the storage required for input arguments).
-Elements of input arrays can be modified.
+expected worst-case time complexity is O(log(N));
+expected worst-case space complexity is O(1).
+Copyright 2009–2017 by Codility Limited. All Rights Reserved. Unauthorized copying, publication or disclosure prohibited.
+Custom test casesformat: 1041	0/10	
+Solution
+Solution
+
+Run
+
+Submit
+
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+using System;
+// you can also use other imports, for example:
+// using System.Collections.Generic;
+// you can write to stdout for debugging purposes, e.g.
+// Console.WriteLine("this is a debug message");
+class Solution {
+    public int solution(int N) {
+        // write your code in C# 6.0 with .NET 4.5 (Mono)
+    }
+}
+C# 6.0 with .NET 4.5 (Mono)
+You will see save status here
+Keyboard shortcuts
+Console
+Output console
