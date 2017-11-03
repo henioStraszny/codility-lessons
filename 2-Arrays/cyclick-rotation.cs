@@ -3,9 +3,9 @@ using System.Linq;
 using System.Collections;
 using System.Collections.Generic;
 
-namespace Iteration
+namespace Arrays
 {
-    class Solution {
+    class CyclicRotation {
         private int[] elements;
         private int numberOfRotations;
         public int[] solution(int[] A, int K) {

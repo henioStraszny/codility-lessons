@@ -1,7 +1,7 @@
 using System;
 using System.Linq;
 
-namespace Iteration
+namespace Iterations
 {
     class Solution {
         private int value;

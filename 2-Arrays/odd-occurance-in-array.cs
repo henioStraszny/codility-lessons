@@ -3,9 +3,9 @@ using System.Linq;
 using System.Collections;
 using System.Collections.Generic;
 
-namespace Iteration
+namespace Arrays
 {
-    class Solution {
+    class OddOccuranceInArray {
         private int[] elements;
         public int solution(int[] A) {
             elements = A;
