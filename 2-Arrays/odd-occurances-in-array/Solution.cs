@@ -1,48 +1,55 @@
 using System;
 using System.Linq;
+using System.Collections;
+using System.Collections.Generic;
 
 namespace Iteration
 {
     class Solution {
-        private int value;
-        private string binaryValue;
-        private int[] binaryArray;
-        public int solution(int n) {
-            value = n;
+        private int[] elements;
+        public int solution(int[] A) {
+            elements = A;
             AssertCorrectValues();
-            ConvertToBinary();
-            return ComputeBinaryGap();
+            return FindOdd2();
         }
 
-        private int ComputeBinaryGap()
+        private int FindOdd2()
         {
-            int counter = 0;
-            int maxSize = 0;
-            foreach (var bit in binaryArray)
+            var storage = elements.ToList();
+            var groupped = storage.GroupBy(x => x);
+            return groupped.First(x => x.Count() % 2 == 1).Key;
+        }
+
+        private int FindOdd()
+        {
+            var storage = new List<int>();
+            storage.Add(elements[0]);
+
+            for (int i = 1; i < elements.Count(); i++)
             {
-                if(bit == 0) counter++;
-                else 
-                {
-                    if(counter > maxSize) maxSize = counter;
-                    counter = 0;
-                }
+                if(storage.Any(x => x == elements[i]))
+                    storage.Remove(elements[i]);
+                else
+                    storage.Add(elements[i]);
             }
-            return maxSize;
+            return storage.First();
         }
 
-        private void ConvertToBinary()
-        {
-            binaryValue = Convert.ToString(value, 2); 
-            binaryArray = binaryValue.Select(x => int.Parse(x.ToString())).ToArray();
-        }
         private void AssertCorrectValues()
         {
-            const string NOT_SUPPORT_VALUE = 
-                @"This algorithm do not support 
-                computation of values lower than 1";
+            const string ELEMENTS_NUMBER_EVEN_NUMBER = 
+                @"Number of elements is an even number.";
+            const string ELEMENTS_NUMBER_EXCEED_MILION = 
+                @"Number of elements is largen than 1 000 000.";
+            const string ELEMENT_EXCEED_BILION =
+                "There is element, larger than 1 000 000 000";
 
-            if(value < 1) 
-                throw new NotSupportedException(NOT_SUPPORT_VALUE);
+            if(elements.Count() % 2 == 0) 
+                throw new NotSupportedException(ELEMENTS_NUMBER_EVEN_NUMBER);
+            if(elements.Count() > 1000000) 
+                throw new NotSupportedException(ELEMENTS_NUMBER_EXCEED_MILION);
+            if(elements.Any(x => x > 1000000000) )
+                throw new NotSupportedException(ELEMENT_EXCEED_BILION);
         }
     }
 }

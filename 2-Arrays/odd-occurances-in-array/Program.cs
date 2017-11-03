@@ -9,11 +9,8 @@ namespace Iteration
         {
             var sol = new Solution();
             Console.WriteLine("Hello World!\n\n");
-            Console.WriteLine(sol.solution(1));
-            Console.WriteLine(sol.solution(9));
-            Console.WriteLine(sol.solution(17));
-            Console.WriteLine(sol.solution(65));
-            Console.WriteLine(sol.solution(2147483647));
+            Console.WriteLine(sol.solution(new int[]{2,3,5,3,2}));
+            Console.WriteLine(sol.solution(new int[]{4,5,4,5,5,5,2,3,5,3,2}));
         }
     }
     
