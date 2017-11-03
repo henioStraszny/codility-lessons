@@ -10,9 +10,23 @@ namespace Iteration
         public int solution(int[] A) {
             elements = A;
             AssertCorrectValues();
-            return FindOdd2();
+            return FindOdd3();
         }
 
+        private int FindOdd3()
+        {
+            var groupped = new Dictionary<int,int>();
+
+            for (int i = 0; i < elements.Count(); i++)
+            {
+                if(groupped.ContainsKey(elements[i]))
+                    groupped[elements[i]]++;
+                else
+                    groupped.Add(elements[i], 1);
+            }
+
+            return groupped.First(x => x.Value % 2 > 0).Key;
+        }
         private int FindOdd2()
         {
             var storage = elements.ToList();
