@@ -7,12 +7,27 @@ namespace CodilityLessons
     {
         static void Main(string[] args)
         {
-            RunFrogJump();
+            RunPermCheck();
+            //RunFrogJump();
             //RunTapeEquilibrium();
             // RunMissingElement();
             // RunIterations();
             // RunOddOccurance();
             // RunCyclicRotation();
+        }
+
+        private static void RunPermCheck()
+        {
+            var sol = new CountingElements.PermCheck();
+            Console.WriteLine("Permutation check test!");
+            Console.WriteLine();
+            Console.WriteLine(sol.solution(new int[]{2,1,3}));
+            Console.WriteLine(sol.solution(new int[]{2,1,3,4,5,6}));
+            Console.WriteLine(sol.solution(new int[]{2,1,3,4,6}));
+            Console.WriteLine(sol.solution(new int[]{2,1,3,6,6}));
+            Console.WriteLine(sol.solution(new int[]{2,1,3,5,6}));
+            Console.WriteLine(sol.solution(new int[]{2,23,3}));
+            Console.WriteLine();
         }
 
         private static void RunFrogJump()
