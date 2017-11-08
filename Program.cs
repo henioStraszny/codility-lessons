@@ -7,7 +7,8 @@ namespace CodilityLessons
     {
         static void Main(string[] args)
         {
-            RunFrogRiverOne();
+            RunMissingInteger();
+            // RunFrogRiverOne();
             //RunPermCheck();
             //RunFrogJump();
             //RunTapeEquilibrium();
@@ -17,10 +18,23 @@ namespace CodilityLessons
             // RunCyclicRotation();
         }
 
+        private static void RunMissingInteger()
+        {
+            var sol = new CountingElements.MissingIntegers();
+            Console.WriteLine("Missing integer test!");
+            Console.WriteLine();
+            // 5
+            Console.WriteLine(sol.solution(new [] {1, 3, 6, 4, 1, 2}));
+            // 4
+            Console.WriteLine(sol.solution(new [] {1,2,3}));
+            // 1
+            Console.WriteLine(sol.solution(new [] {-1, -3}));
+        }
+
         private static void RunFrogRiverOne()
         {
             var sol = new CountingElements.FrogRiverOne();
-            Console.WriteLine("Permutation check test!");
+            Console.WriteLine("Frog river jump test!");
             Console.WriteLine();
             // 2
             Console.WriteLine(sol.solution(3, new int[]{2,1,3}));
