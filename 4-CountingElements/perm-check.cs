@@ -1,7 +1,7 @@
 using System;
 using System.Linq;
 
-namespace CountingElements
+namespace CodilityLessons
 {
     class PermCheck
     {

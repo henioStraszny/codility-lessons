@@ -1,6 +1,6 @@
 using System;
 
-namespace CountingElements
+namespace CodilityLessons
 {
     class MaxCounters
     {

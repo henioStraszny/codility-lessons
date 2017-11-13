@@ -3,7 +3,7 @@ using System.Linq;
 using System.Collections;
 using System.Collections.Generic;
 
-namespace CountingElements
+namespace CodilityLessons
 {
     class MissingIntegers
     {
