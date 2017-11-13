@@ -16,7 +16,7 @@ namespace CodilityLessons
                 PermCheck
             };
         }
-        public void MaxCounters()
+        private void MaxCounters()
         {
             var sol = new MaxCounters();
             Assert.Equal(
@@ -29,7 +29,7 @@ namespace CodilityLessons
             );
         }
 
-        public void MissingInteger()
+        private void MissingInteger()
         {
             var sol = new MissingIntegers();
             Assert.Equal(sol.solution(new[] { 1, 3, 6, 4, 1, 2 }), 5);
@@ -37,14 +37,14 @@ namespace CodilityLessons
             Assert.Equal(sol.solution(new[] { -1, -3 }), 1);
         }
 
-        public void FrogRiverOne()
+        private void FrogRiverOne()
         {
             var sol = new FrogRiverOne();
             Assert.Equal(sol.solution(3, new int[] { 2, 1, 3 }), 2);
             Assert.Equal(sol.solution(4, new int[] { 2, 1, 3, 4, 5, 6 }), 3);
             Assert.Equal(sol.solution(7, new int[] { 2, 1, 3, 4, 5, 6 }), -1);
         }
-        public void PermCheck()
+        private void PermCheck()
         {
             var sol = new PermCheck();
             Assert.Equal(sol.solution(new int[] { 2, 1, 3 }), 1);
