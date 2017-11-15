@@ -6,18 +6,21 @@ namespace CodilityLessons
     {
         public int solution(int A, int B, int K)
         {
-            var counter = 0;
-            var sum = 0;
-            if(A%K == 0)
-                sum = A; 
-            else
-                sum = A - (A%K) + K; 
-            while(sum < B)
+            var left = 0;
+            if(A == 0)
             {
-                counter++;
-                sum += K;
+                left = -1;
+                if(B == 0)
+                    return 1;
             }
-            return counter;
+            else
+            {
+                left = A%K == 0 ? (A-1)/K: A/K;
+            }
+
+            var right = B/K;
+
+            return right - left;
         }
     }
 }
