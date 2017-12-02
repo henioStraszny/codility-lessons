@@ -8,8 +8,9 @@ namespace CodilityLessons
     {
         static void Main(string[] args)
         {
-            new CountingElementsRunner();
-            new PrefixSumsRunner();
+            new IMC_EU.Runner();
+            // new CountingElementsRunner();
+            // new PrefixSumsRunner();
             // RunTapeEquilibrium();
             // RunMissingElement();
             // RunIterations();
